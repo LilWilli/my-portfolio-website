@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demilade's Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./javascript-logo-javascript-icon-transparent-free-png.webp" type="image/x-icon">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      /* Changed font to Poppins */
+      background-color: #0D1117;
+      /* Updated background color */
+      color: #C9D1D9;
+      /* Updated text color */
+    }
+
+    header.navbar {
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .image-render {
+      background-image: url(./fashion-model-pictures-u9ke1pkldg5pagfq.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+      bottom: 20px;
+    }
+
+    /* Add more transitions and animations */
+    .animated {
+      animation-fill-mode: both;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fadeInDown {
+      animation-name: fadeInDown;
+      animation-duration: 1s;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fadeInUp {
+      animation-name: fadeInUp;
+      animation-duration: 1s;
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .fadeInLeft {
+      animation-name: fadeInLeft;
+      animation-duration: 1s;
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .fadeInRight {
+      animation-name: fadeInRight;
+      animation-duration: 1s;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slideInUp {
+      animation-name: slideInUp;
+      animation-duration: 1s;
+    }
+
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slideInDown {
+      animation-name: slideInDown;
+      animation-duration: 1s;
+    }
+
+    .card {
+      border: none;
+      transition: transform 0.3s, opacity 0.5s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar navbar-dark bg-dark py-3">
+    <div class="container text-center text-white">
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h1 class="animated fadeInDown">Willi's Portfolio</h1>
+      <nav class="mt-3 d-none d-lg-block">
+        <a href="#home" class="text-white text-decoration-none me-3 animated fadeInRight">Homepage</a>
+        <a href="#about" class="text-white text-decoration-none me-3 animated fadeInLeft">About</a>
+        <a href="#projects" class="text-white text-decoration-none me-3 animated fadeInUp">Projects</a>
+        <a href="#contact" class="text-white text-decoration-none animated fadeInRight">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar"
+    aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#home" onclick="closeOffcanvas()">Homepage</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about" onclick="closeOffcanvas()">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects" onclick="closeOffcanvas()">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact" onclick="closeOffcanvas()">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <main>
+    <div class="image-render" id="home">
+      <div class="container" style="position: relative;top: 150px;">
+        <h1 class="text-white">Welcome to Willis Portfolio</h1>
+        <p style="color: #ADBAC7;">This is the place where you can view what I have done, recreated, published
+          online and perfected.</p>
+      </div>
+    </div>
+  </main>
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 animated fadeInUp">About Me</h2>
+      <p class="text-center animated fadeInUp">I am a frontend developer with experience in HTML, CSS, Bootstrap,
+        JavaScript, and React.
+        Currently, I am learning backend development at Alusoft Technologies Limited.</p>
+      <p class="text-center animated fadeInUp">Coding Certificate: In view</p>
+      <p class="text-center animated fadeInUp">Name: Demilade</p>
+      <p class="text-center animated fadeInUp">Phone Number: 09084988744</p>
+      <p class="text-center animated fadeInUp">Github Username: LilWilli</p>
+      <!-- Add logos for coding languages -->
+      <div class="text-center mt-4">
+        <h2 class="text-center animated fadeInUp">These are what I am good at:</h2>
+        <img
+          src="./png-clipart-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-thumbnail.png"
+          alt="HTML Logo" style="width: 50px; margin-right: 10px;" class="animated slideInLeft">
+        <img src="./images (1).png" alt="CSS Logo" style="width: 50px; margin-right: 10px;"
+          class="animated slideInLeft">
+        <img src="./png-transparent-bootstrap-plain-wordmark-logo-icon.png" alt="Bootstrap Logo"
+          style="width: 50px; margin-right: 10px;" class="animated slideInLeft">
+        <img src="./javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript Logo"
+          style="width: 50px; margin-right: 10px;" class="animated slideInLeft">
+        <img src="./png-transparent-react-computer-icons-redux-javascript-others-logo-symmetry-nodejs-thumbnail.png"
+          alt="React Logo" style="width: 50px;" class="animated slideInLeft">
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 animated fadeInUp">Projects cloned or created from scratch</h2>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card animated fadeInRight">
+            <img src="./cheerful-happy-woman-enjoying-shopping-260nw-1417347668.webp" class="card-img-top"
+              alt="Jumia Project">
+            <div class="card-body">
+              <h5 class="card-title">Animeclone Project Like Jumia project</h5>
+              <p class="card-text">A Jumia-like website constructed by me located at <a
+                  href="https://lilwilli.github.io/ReactApp/" target="_blank">This Link</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card animated fadeInLeft">
+            <img src="./image-omelette.jpeg" class="card-img-top" alt="Resume Project">
+            <div class="card-body">
+              <h5 class="card-title">Recipe Bake Project</h5>
+              <p class="card-text">A recreated project from Frontend Mentor. See on <a
+                  href="https://lilwilli.github.io/Recipe-Bake/" target="_blank">This link</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card animated fadeInUp">
+            <img src="./IMG-20240212-WA0044.jpg" class="card-img-top" alt="Figma Project">
+            <div class="card-body">
+              <h5 class="card-title">Toos Baby Lounge</h5>
+              <p class="card-text">A school located at Ibadan. <a href="https://lilwilli.github.io/Toos-website/"
+                  target="_blank">This link</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-dark text-white py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 animated fadeInUp">Contact Me</h2>
+      <ul class="list-unstyled text-center">
+        <li>Email: demi.adepitan@gmail.com</li>
+        <li>Phone: 09084988744</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2023 Demilade</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function closeOffcanvas() {
+      console.log("Close offcanvas function called");
+      var offcanvas = document.querySelector('.offcanvas');
+      var bootstrapOffcanvas = new bootstrap.Offcanvas(offcanvas);
+      bootstrapOffcanvas.hide();
+      console.log(bootstrapOffcanvas);
+      console.log(offcanvas);
+    }
+    function closeOffcanvas() {
+      $('#offcanvasNavbar').offcanvas('hide');
+    }
+
+  </script>
+
+</body>
+
+</html>
